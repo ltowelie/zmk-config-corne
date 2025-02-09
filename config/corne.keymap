@@ -14,8 +14,13 @@
 
         combo_esc {
             timeout-ms = <50>;
-            key-positions = <0 1>;
+            key-positions = <37 38>;
             bindings = <&kp ESC>;
+        };
+
+        CapsLock {
+            bindings = <&kp CAPSLOCK>;
+            key-positions = <39 40>;
         };
     };
 
