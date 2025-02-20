@@ -14,13 +14,13 @@
 
         combo_esc {
             timeout-ms = <50>;
-            key-positions = <37 38>;
+            key-positions = <18 19>;
             bindings = <&kp ESC>;
         };
 
         CapsLock {
             bindings = <&kp CAPSLOCK>;
-            key-positions = <39 40>;
+            key-positions = <16 17>;
         };
     };
 
@@ -64,10 +64,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB                  &kp Q  &kp W  &kp E     &kp R  &kp T        &kp Y    &kp U      &kp I      &kp O    &kp P          &kp LEFT_BRACKET
-&mt LEFT_SHIFT CAPSLOCK  &kp A  &kp S  &kp D     &kp F  &kp G        &kp H    &kp J      &kp K      &kp L    &kp SEMICOLON  &kp SQT
-&kp LCTRL                &kp Z  &kp X  &kp C     &kp V  &kp B        &kp N    &kp M      &kp COMMA  &kp DOT  &kp FSLH       &kp ESC
-                                       &kp LGUI  &mo 1  &kp SPACE    &kp RET  &lt 2 ESC  &kp RALT
+&kp TAB         &kp Q  &kp W  &kp E     &kp R  &kp T        &kp Y    &kp U  &kp I      &kp O    &kp P          &kp LEFT_BRACKET
+&kp LEFT_SHIFT  &kp A  &kp S  &kp D     &kp F  &kp G        &kp H    &kp J  &kp K      &kp L    &kp SEMICOLON  &kp SQT
+&kp LCTRL       &kp Z  &kp X  &kp C     &kp V  &kp B        &kp N    &kp M  &kp COMMA  &kp DOT  &kp FSLH       &kp ESC
+                              &kp LGUI  &mo 1  &kp SPACE    &kp RET  &mo 2  &kp RALT
             >;
         };
 
@@ -79,10 +79,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB         &kp N1  &kp N2  &kp N3    &kp N4  &kp N5       &kp N6    &kp N7    &kp N8        &kp N9      &kp N0  &kp BSPC
-&kp LEFT_SHIFT  &trans  &trans  &trans    &trans  &trans       &kp LEFT  &kp DOWN  &kp UP        &kp RIGHT   &trans  &kp DEL
-&kp LCTRL       &none   &trans  &trans    &trans  &trans       &trans    &trans    &kp KP_COMMA  &kp KP_DOT  &trans  &trans
-                                &kp LGUI  &trans  &kp SPACE    &kp RET   &trans    &kp RALT
+&kp TAB         &kp N1  &kp N2  &kp N3    &kp N4  &kp N5           &kp N6    &kp N7    &kp N8        &kp N9      &kp N0  &kp BSPC
+&kp LEFT_SHIFT  &trans  &trans  &trans    &trans  &trans           &kp LEFT  &kp DOWN  &kp UP        &kp RIGHT   &trans  &kp DEL
+&kp LCTRL       &none   &trans  &trans    &trans  &kp BACKSPACE    &kp DEL   &trans    &kp KP_COMMA  &kp KP_DOT  &trans  &trans
+                                &kp LGUI  &trans  &kp SPACE        &kp RET   &trans    &kp RALT
             >;
         };
 
