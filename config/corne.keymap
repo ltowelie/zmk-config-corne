@@ -55,6 +55,15 @@
         };
     };
 
+    macros {
+        locking_all: locking_all {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 1 &kt LEFT_WIN &kp Z &kt LEFT_WIN &bt BT_SEL 2 &kt LEFT_WIN &kp Z &kt LEFT_WIN>;
+            label = "LOCKING_ALL";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -105,10 +114,10 @@
 
         service {
             bindings = <
-&trans      &trans          &trans        &trans        &sys_reset    &trans          &out OUT_BLE  &out OUT_TOG   &out OUT_USB  &trans   &trans           &trans
-&bt BT_CLR  &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp HOME      &kp PAGE_DOWN  &kp PAGE_UP   &kp END  &kp PAUSE_BREAK  &trans
-&trans      &studio_unlock  &trans        &trans        &trans        &trans          &kp F9        &kp F10        &kp F11       &kp F12  &trans           &trans
-                                          &trans        &trans        &trans          &trans        &trans         &trans
+&trans      &trans        &trans        &trans        &sys_reset    &trans          &out OUT_BLE  &out OUT_TOG   &out OUT_USB  &studio_unlock  &trans           &trans
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp HOME      &kp PAGE_DOWN  &kp PAGE_UP   &kp END         &kp PAUSE_BREAK  &trans
+&trans      &locking_all  &trans        &trans        &trans        &trans          &kp F9        &kp F10        &kp F11       &kp F12         &trans           &trans
+                                        &trans        &trans        &trans          &trans        &trans         &trans
             >;
         };
     };
