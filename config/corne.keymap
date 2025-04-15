@@ -14,7 +14,7 @@
         compatible = "zmk,combos";
 
         combo_esc {
-            timeout-ms = <50>;
+            timeout-ms = <5>;
             key-positions = <18 19>;
             bindings = <&kp ESC>;
         };
@@ -22,6 +22,7 @@
         CapsLock {
             bindings = <&kp CAPSLOCK>;
             key-positions = <16 17>;
+            timeout-ms = <5>;
         };
     };
 
@@ -104,10 +105,10 @@
 
         service {
             bindings = <
-&trans      &trans          &trans        &trans        &sys_reset    &trans          &trans    &out OUT_TOG   &trans       &trans   &trans           &trans
-&bt BT_CLR  &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP  &kp END  &kp PAUSE_BREAK  &trans
-&trans      &studio_unlock  &trans        &trans        &trans        &trans          &kp F9    &kp F10        &kp F11      &kp F12  &trans           &trans
-                                          &trans        &trans        &trans          &trans    &trans         &trans
+&trans      &trans          &trans        &trans        &sys_reset    &trans          &out OUT_BLE  &out OUT_TOG   &out OUT_USB  &trans   &trans           &trans
+&bt BT_CLR  &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp HOME      &kp PAGE_DOWN  &kp PAGE_UP   &kp END  &kp PAUSE_BREAK  &trans
+&trans      &studio_unlock  &trans        &trans        &trans        &trans          &kp F9        &kp F10        &kp F11       &kp F12  &trans           &trans
+                                          &trans        &trans        &trans          &trans        &trans         &trans
             >;
         };
     };
