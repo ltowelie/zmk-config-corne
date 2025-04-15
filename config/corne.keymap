@@ -14,7 +14,7 @@
         compatible = "zmk,combos";
 
         combo_esc {
-            timeout-ms = <5>;
+            timeout-ms = <10>;
             key-positions = <18 19>;
             bindings = <&kp ESC>;
         };
@@ -22,7 +22,7 @@
         CapsLock {
             bindings = <&kp CAPSLOCK>;
             key-positions = <16 17>;
-            timeout-ms = <5>;
+            timeout-ms = <10>;
         };
     };
 
