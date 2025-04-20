@@ -69,6 +69,27 @@
             bindings = <&kt LEFT_ALT &kt LEFT_GUI &kp NUMBER_2 &kt LGUI &kt LALT &bt BT_SEL 1>;
             label = "SWITCH_BLUETOOTH_AND_LOGI_HOST";
         };
+
+        sw_bluetooth_logi_host_3: sw_bluetooth_logi_host_3 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kt LEFT_ALT &kt LEFT_GUI &kp NUMBER_3 &kt LGUI &kt LALT &bt BT_SEL 2>;
+            label = "SW_BLUETOOTH_LOGI_HOST_3";
+        };
+
+        sw_bluetooth_logi_host_4: sw_bluetooth_logi_host_4 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kt LEFT_ALT &kt LEFT_GUI &kp NUMBER_4 &kt LGUI &kt LALT &bt BT_SEL 3>;
+            label = "SW_BLUETOOTH_LOGI_HOST_4";
+        };
+
+        sw_bluetooth_logi_host_5: sw_bluetooth_logi_host_5 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kt LEFT_ALT &kt LEFT_GUI &kp NUMBER_5 &kt LGUI &kt LALT &bt BT_SEL 4>;
+            label = "SW_BLUETOOTH_LOGI_HOST_5";
+        };
     };
 
     keymap {
