@@ -66,12 +66,7 @@
         sw_bluetooth_logi_host_2: switch_bluetooth_and_logi_host {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LEFT_ALT &kp LEFT_GUI &kp NUMBER_2>,
-                <&macro_release>,
-                <&bt BT_SEL 1>;
-
+            bindings = <&kt LEFT_ALT &kt LEFT_GUI &kp NUMBER_2 &kt LGUI &kt LALT &bt BT_SEL 1>;
             label = "SWITCH_BLUETOOTH_AND_LOGI_HOST";
         };
     };
