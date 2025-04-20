@@ -62,6 +62,18 @@
             bindings = <&bt BT_SEL 1 &kt LEFT_WIN &kp Z &kt LEFT_WIN &bt BT_SEL 2 &kt LEFT_WIN &kp Z &kt LEFT_WIN>;
             label = "LOCKING_ALL";
         };
+
+        sw_bluetooth_logi_host_2: switch_bluetooth_and_logi_host {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_ALT &kp LEFT_GUI &kp NUMBER_2>,
+                <&macro_release>,
+                <&bt BT_SEL 1>;
+
+            label = "SWITCH_BLUETOOTH_AND_LOGI_HOST";
+        };
     };
 
     keymap {
@@ -114,10 +126,10 @@
 
         service {
             bindings = <
-&trans      &trans        &trans        &trans        &sys_reset    &kp C_VOLUME_UP      &out OUT_BLE  &out OUT_TOG   &out OUT_USB  &studio_unlock  &trans           &trans
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4         &kp HOME      &kp PAGE_DOWN  &kp PAGE_UP   &kp END         &kp PAUSE_BREAK  &trans
-&trans      &locking_all  &trans        &trans        &trans        &kp C_VOLUME_DOWN    &kp F9        &kp F10        &kp F11       &kp F12         &trans           &trans
-                                        &trans        &trans        &trans               &trans        &trans         &trans
+&trans      &trans        &trans                     &trans        &sys_reset    &kp C_VOLUME_UP      &out OUT_BLE  &out OUT_TOG   &out OUT_USB  &studio_unlock  &trans           &trans
+&bt BT_CLR  &bt BT_SEL 0  &sw_bluetooth_logi_host_2  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4         &kp HOME      &kp PAGE_DOWN  &kp PAGE_UP   &kp END         &kp PAUSE_BREAK  &trans
+&trans      &locking_all  &trans                     &trans        &trans        &kp C_VOLUME_DOWN    &kp F9        &kp F10        &kp F11       &kp F12         &trans           &trans
+                                                     &trans        &trans        &trans               &trans        &trans         &trans
             >;
         };
     };
